@@ -1,0 +1,114 @@
+Atue como um Especialista Sênior em Front-End (React/HTML/Tailwind) e UI/UX Designer de Alto Nível.
+Crie um único arquivo HTML completo e responsivo, usando Tailwind via CDN, JS nativo e FontAwesome.
+O resultado deve ser profissional, limpo, organizado, comentado e escalável.
+
+1. PERFIL DO PROFISSIONAL (dados reais)
+
+(não inventar nada além do que está abaixo)
+
+Nome: Harris Alexandre
+Título Principal: Software Engineer & Professor de Programação e Robótica
+Slogan Hero: "Transformando Desafios em Oportunidades"
+Frase de Impacto (Footer): "A melhor maneira de prever o futuro é inventá-lo." — Alan Kay
+Resumo Bio:
+
+Atuo transformando conhecimento técnico em aprendizado prático. Tenho vasta experiência em projetos globais e inspiro jovens a usar a tecnologia como ferramenta de transformação.
+
+2. DESIGN SYSTEM (Estilo Visual obrigatório)
+
+Tema: Dark Mode Profundo — #0f0f10
+
+Cor de Acento (Accent): Terracota Neon → #E07A5F ou #FF6B6B + efeitos Glow suave difuso
+
+Tipografia:
+
+Poppins → Títulos
+
+Inter → Texto
+
+Botões e Cards com border-radius alto (ex: rounded-2xl)
+
+Responsivo (mobile-first obrigatório)
+
+UI deve seguir referências como Apple / SpaceX / Futurismo minimalista elegante
+
+3. COMPORTAMENTO / INTERAÇÕES
+
+Scroll Suave com JS (scrollIntoView ou CSS scroll-smooth)
+
+Animações de entrada (fade-in) com Intersection Observer
+
+Transições padrão: transition-all duration-300 ease-in-out
+
+Acessibilidade: alt="", aria-label="", semântica HTML correta
+
+4. ESTRUTURA OBRIGATÓRIA DO SITE
+🧊 A. Header (Glassmorphism fixo no topo):
+
+Menu com links âncora + scroll suave
+
+🚀 B. Hero Section
+
+Layout centralizado ou alinhado à esquerda
+
+CTAs:
+
+“Ver Projetos” (botão sólido terracota)
+
+“Entre em Contato” (outline terracota)
+
+Social Bar: LinkedIn, GitHub, Behance, Credly, Instagram @_harrisalexandre
+
+🎓 C. Formação Acadêmica (Grid)
+
+Separar Graduação / Pós visualmente
+
+Graduações:
+
+Tecnólogo em ADS
+
+Bacharel em Ciências da Computação
+
+Pós-Graduações:
+
+Gestão de TI, MBA Ágeis, IA/Machine Learning, Cloud Computing, Design de Produtos Digitais
+
+🏅 D. Certificações Internacionais (Badges estilo Credly)
+
+Layout de badges ou ícones de medalha
+
+Destaque:
+
+Mulesoft MCD L2
+
+AWS: Data Engineer / Developer / DevOps Pro
+
+Google: Cloud Associate / Architect / Security Engineer
+
+Botão: "Verificar Credenciais no Credly"
+
+💼 E. Experiência Profissional
+
+Use Timeline vertical ou Cards expansíveis (Accordion)
+Nunca tabelas.
+
+⚙️ F. Habilidades (Skills Cloud)
+
+Use tags interativas ou barras de progresso
+
+🧾 G. Footer
+
+Citação Alan Kay
+
+Redes sociais repetidas
+
+Copyright
+
+5. REQUISITOS TÉCNICOS AVANÇADOS
+
+✔ HTML único bem comentado
+✔ Tailwind via CDN
+✔ JS nativo organizado no fim do arquivo
+✔ FontAwesome via CDN
+✔ Código limpo e reutilizável
+✔ Nomear classes seguindo padrão semântico
