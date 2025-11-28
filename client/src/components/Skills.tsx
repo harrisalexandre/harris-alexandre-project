@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Sparkles, Lightbulb, Globe, FolderGit2 } from "lucide-react";
 
 const skillCategories = [
   {
@@ -58,6 +58,37 @@ const skillCategories = [
   },
 ];
 
+// 🔥 PROJETOS (exemplo real + mocks)
+const projects = [
+  {
+    title: "Uso Ético e Inteligente da IA na Educação",
+    link: "https://ia-em-aula-guia.lovable.app/",
+    image: "projects/projeto-ia.png",
+    description:
+      "Plataforma completa para uso ético da inteligência artificial nas escolas, com diretrizes e ferramentas práticas.",
+    icon: Lightbulb,
+    color: "from-blue-600 to-cyan-400",
+  },
+  {
+    title: "Programação e Robótica para Jovens",
+    link: "#",
+    image: "projects/ctrl.png",
+    description:
+      "Projetos gamificados de programação e robótica a crianças e adolescentes unindo SCRUM e pensamento computacional.",
+    icon: Globe,
+    color: "from-orange-500 to-red-500",
+  },
+  {
+    title: "Mentoria em Inteligência Artificial e Machine Learning",
+    link: "#",
+    image: "projects/palestra.png",
+    description:
+      "Projetos educacionais usando Inteligência Artificial e Machine Learning",
+    icon: FolderGit2,
+    color: "from-purple-500 to-pink-500",
+  },
+];
+
 export function Skills() {
   const [isVisible, setIsVisible] = useState(false);
   const [animateProgress, setAnimateProgress] = useState(false);
@@ -92,30 +123,21 @@ export function Skills() {
       className="py-20 px-4 sm:px-6 lg:px-8"
       data-testid="section-skills"
     >
+      {/* HABILIDADES */}
       <div className="container mx-auto max-w-6xl">
         <div
           className={`text-center mb-16 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <Badge
-            variant="secondary"
-            className="mb-4 rounded-2xl px-4 py-2"
-            data-testid="badge-skills"
-          >
+          <Badge variant="secondary" className="mb-4 rounded-2xl px-4 py-2">
             <Sparkles className="w-4 h-4 mr-2" />
             Habilidades
           </Badge>
-          <h2
-            className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
-            data-testid="heading-skills"
-          >
+          <h2 className=" text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Expertise Técnico
           </h2>
-          <p
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
-            data-testid="text-skills-description"
-          >
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Competências desenvolvidas através de anos de experiência prática e
             aprendizado contínuo
           </p>
@@ -131,26 +153,16 @@ export function Skills() {
                   : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${catIndex * 100}ms` }}
-              data-testid={`card-skill-category-${catIndex}`}
             >
               <CardContent className="p-6">
-                <h3
-                  className="font-heading text-lg font-semibold mb-6 text-primary"
-                  data-testid={`text-skill-category-${catIndex}`}
-                >
+                <h3 className=" text-lg font-semibold mb-6 text-primary">
                   {category.category}
                 </h3>
                 <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
-                    <div
-                      key={skillIndex}
-                      data-testid={`skill-${catIndex}-${skillIndex}`}
-                    >
+                    <div key={skillIndex}>
                       <div className="flex items-center justify-between mb-2">
-                        <span
-                          className="text-sm font-medium"
-                          data-testid={`text-skill-name-${catIndex}-${skillIndex}`}
-                        >
+                        <span className="text-sm font-medium">
                           {skill.name}
                         </span>
                         <span className="text-xs text-muted-foreground font-semibold">
@@ -162,8 +174,9 @@ export function Skills() {
                           className="h-full bg-gradient-to-r from-primary to-primary/70 rounded-full transition-all duration-1000 ease-out"
                           style={{
                             width: animateProgress ? `${skill.level}%` : "0%",
-                            transitionDelay: `${(catIndex * 100) + (skillIndex * 50)}ms`,
-                            boxShadow: "0 0 10px hsl(var(--primary) / 0.5)",
+                            transitionDelay: `${
+                              catIndex * 100 + skillIndex * 50
+                            }ms`,
                           }}
                         />
                       </div>
@@ -173,6 +186,108 @@ export function Skills() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </div>
+
+      {/* PROJETOS */}
+      <div className="container mx-auto max-w-6xl mt-24">
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <h2 className=" text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Trabalhos Reais
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Aplicações que refletem minha visão e propósito
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <Card
+              key={index}
+              className={`hover-elevate active-elevate-2 border-2 rounded-2xl overflow-hidden transition-all duration-700 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
+              <div className={`h-2 bg-gradient-to-r ${project.color}`} />
+
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className=" text-xl">{project.title}</CardTitle>
+                  <Badge variant="secondary" className="rounded-xl">
+                    <project.icon className="w-4 h-4" />
+                  </Badge>
+                </div>
+              </CardHeader>
+
+              <CardContent className="space-y-4">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={project.image}
+                    width={500}
+                    height={300}
+                    alt={project.title}
+                    className="rounded-xl mb-4 shadow-lg hover:scale-[1.02] transition"
+                  />
+                </a>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {project.description}
+                </p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                >
+                  Ver Projeto →
+                </a>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* SEÇÃO SOBRE MIM */}
+        <div className="container mx-auto max-w-4xl mt-32">
+          <div
+            className={`text-center mb-12 transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
+            <Badge variant="secondary" className="mb-4 rounded-2xl px-4 py-2">
+              🎬 Sobre Mim
+            </Badge>
+
+            <h2 className=" text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              Conheça Minha História
+            </h2>
+
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Um pouco da minha trajetória, propósito e visão de futuro.
+            </p>
+          </div>
+
+          {/* VÍDEO YOUTUBE RESPONSIVO */}
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg hover:scale-[1.01] transition">
+            <iframe
+              src="https://www.youtube.com/embed/SEU_VIDEO_AQUI"
+              title="Apresentação - Harris Alexandre"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>

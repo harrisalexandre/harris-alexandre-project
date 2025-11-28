@@ -6,7 +6,7 @@ import { Briefcase, Code, Users, Rocket } from "lucide-react";
 const experiences = [
   {
     role: "Professor de Programação e Robótica",
-    company: "Instituição de Ensino",
+    company: "Instituição de Ensino (CNA Ctrl+Play)",
     period: "Presente",
     description:
       "Inspirando jovens a usar tecnologia como ferramenta de transformação, ensinando programação, robótica e pensamento computacional.",
@@ -20,7 +20,7 @@ const experiences = [
   },
   {
     role: "Software Engineer",
-    company: "Projetos Globais",
+    company: "Compass.Uol (Petrobrás, BMW, Google...)",
     period: "Vários Anos",
     description:
       "Experiência em projetos internacionais desenvolvendo soluções escaláveis e de alta performance com tecnologias modernas.",
@@ -95,7 +95,7 @@ export function Experience() {
             Experiência Profissional
           </Badge>
           <h2
-            className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
+            className=" text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
             data-testid="heading-experience"
           >
             Trajetória de Impacto
@@ -131,7 +131,7 @@ export function Experience() {
                 >
                   <div className="md:w-1/2" />
                   <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="p-4 bg-background rounded-2xl border-4 border-primary/20 shadow-lg">
+                    <div className="p-4 bg-[hsl(var(--background))] rounded-2xl border-4 border-primary/20 shadow-lg">
                       <exp.icon className="h-6 w-6 text-primary" />
                     </div>
                   </div>
@@ -145,12 +145,15 @@ export function Experience() {
                     <CardHeader className="pb-4">
                       <div className="flex items-start justify-between gap-4 mb-2">
                         <CardTitle
-                          className="font-heading text-xl"
+                          className=" text-xl"
                           data-testid={`text-experience-role-${index}`}
                         >
                           {exp.role}
                         </CardTitle>
-                        <Badge variant="secondary" className="rounded-xl shrink-0">
+                        <Badge
+                          variant="secondary"
+                          className="rounded-xl shrink-0"
+                        >
                           {exp.period}
                         </Badge>
                       </div>

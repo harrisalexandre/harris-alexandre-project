@@ -19,9 +19,18 @@ const graduations = [
 const postGraduations = [
   { title: "Gestão de TI", type: "Pós-Graduação" },
   { title: "MBA em Metodologias Ágeis", type: "Pós-Graduação" },
-  { title: "Inteligência Artificial e Machine Learning", type: "Pós-Graduação" },
+  {
+    title: "Inteligência Artificial e Machine Learning",
+    type: "Pós-Graduação",
+  },
   { title: "Cloud Computing", type: "Pós-Graduação" },
   { title: "Design de Produtos Digitais", type: "Pós-Graduação" },
+  { title: "Design de Produtos Digitais", type: "Pós-Graduação" },
+  {
+    title: "Extensão em Informática e Robótica Industrial",
+    type: "Pós-Graduação",
+  },
+  { title: "Robótica Educacional", type: "Pós-Graduação" },
 ];
 
 export function Education() {
@@ -71,7 +80,7 @@ export function Education() {
             Formação Acadêmica
           </Badge>
           <h2
-            className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
+            className=" text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
             data-testid="heading-education"
           >
             Educação de Excelência
@@ -86,7 +95,7 @@ export function Education() {
 
         <div className="mb-12">
           <h3
-            className="font-heading text-2xl font-semibold mb-6 flex items-center gap-3"
+            className=" text-2xl font-semibold mb-6 flex items-center gap-3"
             data-testid="heading-graduations"
           >
             <GraduationCap className="h-6 w-6 text-primary" />
@@ -111,7 +120,7 @@ export function Education() {
                     </div>
                     <div className="flex-1">
                       <h4
-                        className="font-heading text-lg font-semibold mb-2"
+                        className=" text-lg font-semibold mb-2"
                         data-testid={`text-graduation-title-${index}`}
                       >
                         {edu.title}
@@ -129,7 +138,7 @@ export function Education() {
 
         <div>
           <h3
-            className="font-heading text-2xl font-semibold mb-6 flex items-center gap-3"
+            className=" text-2xl font-semibold mb-6 flex items-center gap-3"
             data-testid="heading-postgraduate"
           >
             <Award className="h-6 w-6 text-primary" />
@@ -149,7 +158,7 @@ export function Education() {
               >
                 <CardContent className="p-6">
                   <h4
-                    className="font-heading text-base font-semibold mb-3"
+                    className=" text-base font-semibold mb-3"
                     data-testid={`text-postgraduate-title-${index}`}
                   >
                     {edu.title}

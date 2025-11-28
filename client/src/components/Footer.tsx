@@ -5,27 +5,32 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/harris-alexandre/",
+    testId: "link-linkedin",
   },
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com",
+    href: "https://github.com/harrisalexandre",
+    testId: "link-github",
   },
   {
     name: "Behance",
     icon: SiBehance,
-    href: "https://behance.net",
+    href: "https://www.behance.net/harrisalexandre",
+    testId: "link-behance",
   },
   {
     name: "Credly",
     icon: Award,
-    href: "https://credly.com",
+    href: "https://www.credly.com/users/harrisalexandre/",
+    testId: "link-credly",
   },
   {
     name: "Instagram",
     icon: Instagram,
     href: "https://instagram.com/_harrisalexandre",
+    testId: "link-instagram",
   },
 ];
 
@@ -38,9 +43,9 @@ export function Footer() {
     >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <div className="inline-block mb-6 p-4 bg-card rounded-2xl border border-card-border">
+          <div className="inline-block mb-6 p-4 ">
             <p
-              className="font-heading text-xl sm:text-2xl md:text-3xl font-semibold mb-3 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent"
+              className=" text-xl sm:text-2xl md:text-3xl font-semibold mb-3 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent"
               data-testid="text-footer-quote"
             >
               "A melhor maneira de prever o futuro é inventá-lo."
@@ -74,7 +79,7 @@ export function Footer() {
             data-testid="link-email"
           >
             <Mail className="h-4 w-4" />
-            <span>contact@harrisalexandre.com</span>
+            <span>harrisalexandre308@gmail.com</span>
           </a>
         </div>
 

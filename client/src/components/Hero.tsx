@@ -8,25 +8,25 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/harris-alexandre/",
     testId: "link-linkedin",
   },
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com",
+    href: "https://github.com/harrisalexandre",
     testId: "link-github",
   },
   {
     name: "Behance",
     icon: SiBehance,
-    href: "https://behance.net",
+    href: "https://www.behance.net/harrisalexandre",
     testId: "link-behance",
   },
   {
     name: "Credly",
     icon: Award,
-    href: "https://credly.com",
+    href: "https://www.credly.com/users/harrisalexandre/",
     testId: "link-credly",
   },
   {
@@ -94,29 +94,19 @@ export function Hero() {
       <div className="container mx-auto relative z-10">
         <div
           className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
-            isVisible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <Badge
-            variant="secondary"
-            className="mb-6 px-4 py-2 text-sm font-medium rounded-2xl"
-            data-testid="badge-status"
-          >
-            <span className="inline-block w-2 h-2 bg-primary rounded-full mr-2 animate-pulse" />
-            Disponível para novos projetos
-          </Badge>
-
+          <br></br>
           <h1
-            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent"
+            className=" text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent"
             data-testid="text-name"
           >
             Harris Alexandre
           </h1>
 
           <h2
-            className="font-heading text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-primary"
+            className=" text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-primary"
             data-testid="text-title"
             style={{
               textShadow: "0 0 30px hsl(var(--primary) / 0.3)",
@@ -147,7 +137,8 @@ export function Hero() {
               onClick={handleProjectsClick}
               className="rounded-2xl px-8 text-base font-semibold shadow-lg transition-all duration-300"
               style={{
-                boxShadow: "0 0 30px hsl(var(--primary) / 0.4), 0 0 60px hsl(var(--primary) / 0.2)",
+                boxShadow:
+                  "0 0 30px hsl(var(--primary) / 0.4), 0 0 60px hsl(var(--primary) / 0.2)",
               }}
               data-testid="button-view-projects"
             >
@@ -166,7 +157,10 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4" data-testid="social-links">
+          <div
+            className="flex flex-wrap items-center justify-center gap-4"
+            data-testid="social-links"
+          >
             {socialLinks.map((social) => (
               <a
                 key={social.name}

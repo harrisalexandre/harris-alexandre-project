@@ -38,8 +38,8 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg"
-          : "bg-background/60 backdrop-blur-md"
+          ? "bg-[hsl(var(--background))]/80 backdrop-blur-xl border-b border-border/50 shadow-lg"
+          : "bg-[hsl(var(--background))]/60 backdrop-blur-md"
       }`}
       data-testid="header-navigation"
     >
@@ -47,16 +47,17 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <button
             onClick={() => handleNavClick("#hero")}
-            className="font-heading text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent hover-elevate active-elevate-2 px-2 py-1 rounded-2xl transition-all duration-300"
+            className=" text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent hover-elevate active-elevate-2 px-2 py-1 rounded-2xl transition-all duration-300"
             data-testid="button-logo"
             style={{
               filter: "drop-shadow(0 0 8px hsl(var(--primary) / 0.3))",
             }}
-          >
-            HA
-          </button>
+          ></button>
 
-          <nav className="hidden md:flex items-center gap-1" data-testid="nav-desktop">
+          <nav
+            className="hidden md:flex items-center gap-1"
+            data-testid="nav-desktop"
+          >
             {navItems.map((item) => (
               <button
                 key={item.href}
@@ -86,24 +87,6 @@ export function Header() {
             </Button>
 
             <Button
-              variant="default"
-              size="sm"
-              className="hidden md:flex items-center gap-2 rounded-2xl"
-              data-testid="button-download-resume"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/api/download-resume';
-                link.download = 'Harris-Alexandre-Curriculo.txt';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-            >
-              <Download className="h-4 w-4" />
-              <span>Currículo</span>
-            </Button>
-
-            <Button
               variant="outline"
               size="icon"
               className="md:hidden rounded-2xl"
@@ -122,43 +105,6 @@ export function Header() {
           </div>
         </div>
       </div>
-
-      {isMenuOpen && (
-        <div
-          id="mobile-navigation"
-          className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border/50"
-          data-testid="nav-mobile"
-        >
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => handleNavClick(item.href)}
-                className="px-4 py-3 text-left text-sm font-medium text-foreground/70 hover:text-foreground hover-elevate active-elevate-2 rounded-2xl transition-all duration-300"
-                data-testid={`link-mobile-${item.label.toLowerCase()}`}
-              >
-                {item.label}
-              </button>
-            ))}
-            <Button
-              variant="default"
-              className="w-full mt-2 rounded-2xl"
-              data-testid="button-download-resume-mobile"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/api/download-resume';
-                link.download = 'Harris-Alexandre-Curriculo.txt';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-            >
-              <Download className="h-4 w-4 mr-2" />
-              Baixar Currículo
-            </Button>
-          </nav>
-        </div>
-      )}
     </header>
   );
 }
