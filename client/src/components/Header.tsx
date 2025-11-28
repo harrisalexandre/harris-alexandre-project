@@ -47,12 +47,18 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <button
             onClick={() => handleNavClick("#hero")}
-            className=" text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent hover-elevate active-elevate-2 px-2 py-1 rounded-2xl transition-all duration-300"
+            className="rounded-2xl hover-elevate active-elevate-2 transition-all duration-300"
             data-testid="button-logo"
             style={{
               filter: "drop-shadow(0 0 8px hsl(var(--primary) / 0.3))",
             }}
-          ></button>
+          >
+            <img
+              src="/logo.png"
+              alt="Logo do Harris"
+              className="w-10 h-10 md:w-12 md:h-12"
+            />
+          </button>
 
           <nav
             className="hidden md:flex items-center gap-1"

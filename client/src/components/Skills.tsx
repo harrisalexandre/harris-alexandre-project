@@ -255,40 +255,6 @@ export function Skills() {
             </Card>
           ))}
         </div>
-
-        {/* SEÇÃO SOBRE MIM */}
-        <div className="container mx-auto max-w-4xl mt-32">
-          <div
-            className={`text-center mb-12 transition-all duration-1000 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            }`}
-          >
-            <Badge variant="secondary" className="mb-4 rounded-2xl px-4 py-2">
-              🎬 Sobre Mim
-            </Badge>
-
-            <h2 className=" text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              Conheça Minha História
-            </h2>
-
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Um pouco da minha trajetória, propósito e visão de futuro.
-            </p>
-          </div>
-
-          {/* VÍDEO YOUTUBE RESPONSIVO */}
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg hover:scale-[1.01] transition">
-            <iframe
-              src="https://www.youtube.com/embed/SEU_VIDEO_AQUI"
-              title="Apresentação - Harris Alexandre"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
-          </div>
-        </div>
       </div>
     </section>
   );
