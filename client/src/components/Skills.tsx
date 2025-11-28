@@ -1,7 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles, Lightbulb, Globe, FolderGit2 } from "lucide-react";
+import {
+  Sparkles,
+  Lightbulb,
+  Globe,
+  FolderGit2,
+  Award,
+  Brain,
+  Airplay,
+} from "lucide-react";
 
 const skillCategories = [
   {
@@ -61,21 +69,12 @@ const skillCategories = [
 // 🔥 PROJETOS (exemplo real + mocks)
 const projects = [
   {
-    title: "Uso Ético e Inteligente da IA na Educação",
-    link: "https://ia-em-aula-guia.lovable.app/",
-    image: "projects/projeto-ia.png",
-    description:
-      "Plataforma completa para uso ético da inteligência artificial nas escolas, com diretrizes e ferramentas práticas.",
-    icon: Lightbulb,
-    color: "from-blue-600 to-cyan-400",
-  },
-  {
     title: "Programação e Robótica para Jovens",
-    link: "#",
+    link: "https://ctrlplay.com.br/",
     image: "projects/ctrl.png",
     description:
       "Projetos gamificados de programação e robótica a crianças e adolescentes unindo SCRUM e pensamento computacional.",
-    icon: Globe,
+    icon: Award,
     color: "from-orange-500 to-red-500",
   },
   {
@@ -84,8 +83,53 @@ const projects = [
     image: "projects/palestra.png",
     description:
       "Projetos educacionais usando Inteligência Artificial e Machine Learning",
-    icon: FolderGit2,
+    icon: Brain,
     color: "from-purple-500 to-pink-500",
+  },
+  {
+    title: "CTO & Desenvolvimento de Soluções Digitais",
+    link: "https://alliance-marcas.onrender.com/",
+    image: "projects/alliance-marcas.png",
+    description:
+      "Responsável pela arquitetura e criação do site oficial e sistemas de gestão da empresa, unindo tecnologia, performance e experiência do usuário.",
+    icon: Airplay,
+    color: "from-red-500 to-red-700",
+  },
+  {
+    title: "Sistema completo para Gestão de Projetos Multiplaformas",
+    link: "https://fgk-project.onrender.com/",
+    image: "projects/fgk.png",
+    description:
+      "Um ecossistema fullstack moderno, criado para impulsionar negócios digitais com máxima performance, segurança e experiência de usuário.",
+    icon: Globe,
+    color: "from-green-800 to-green-500",
+  },
+  {
+    title: "Ailos – Soluções Digitais e Integrações em Escala",
+    link: "https://www.ailos.coop.br/",
+    image: "projects/ailos.png",
+    description:
+      "Desenvolvimento de sistemas digitais no ecossistema Ailos, atuando em integrações escaláveis e arquitetura de APIs com foco em eficiência, segurança e governança.",
+    icon: Globe,
+    color: "from-cyan-500 to-yellow-400",
+  },
+  {
+    title: "KMV Ipiranga – Integrações & Arquitetura",
+    link: "https://kmdevantagens.com.br/",
+    image: "projects/kmv.png",
+    description:
+      "Desenvolvimento de integrações escaláveis e seguras entre sistemas e tecnologias, utilizando Mulesoft. Arquitetura técnica, validação de integrações de soluções.",
+    icon: Globe,
+    color: "from-orange-500 to-yellow-500",
+  },
+  {
+    title: "Uso Ético e Inteligente da IA na Educação",
+    link: "https://ia-em-aula-guia.lovable.app/",
+    image: "projects/projeto-ia.png",
+    description:
+      "Plataforma completa para uso ético da inteligência artificial nas escolas, com diretrizes e ferramentas práticas.",
+    icon: Globe,
+    color: "from-blue-600 to-cyan-400",
   },
 ];
 

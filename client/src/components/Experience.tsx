@@ -5,6 +5,20 @@ import { Briefcase, Code, Users, Rocket } from "lucide-react";
 
 const experiences = [
   {
+    role: "Software Engineer Pleno",
+    company: "Compass.Uol (Petrobrás, BMW, Google...)",
+    period: "Vários Anos",
+    description:
+      "Experiência em projetos internacionais desenvolvendo soluções escaláveis e de alta performance com tecnologias modernas.",
+    highlights: [
+      "Arquitetura de sistemas distribuídos",
+      "Cloud computing e DevOps",
+      "Integração de APIs e microsserviços",
+    ],
+    icon: Users,
+    color: "from-orange-500 to-red-500",
+  },
+  {
     role: "Professor de Programação e Robótica",
     company: "Instituição de Ensino (CNA Ctrl+Play)",
     period: "Presente",
@@ -15,21 +29,7 @@ const experiences = [
       "Mentoria de estudantes em projetos práticos",
       "Integração de tecnologias emergentes",
     ],
-    icon: Users,
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    role: "Software Engineer",
-    company: "Compass.Uol (Petrobrás, BMW, Google...)",
-    period: "Vários Anos",
-    description:
-      "Experiência em projetos internacionais desenvolvendo soluções escaláveis e de alta performance com tecnologias modernas.",
-    highlights: [
-      "Arquitetura de sistemas distribuídos",
-      "Cloud computing e DevOps",
-      "Integração de APIs e microsserviços",
-    ],
-    icon: Code,
+    icon: Rocket,
     color: "from-blue-500 to-cyan-500",
   },
   {
@@ -43,8 +43,8 @@ const experiences = [
       "Automação de infraestrutura",
       "Otimização de custos e performance",
     ],
-    icon: Rocket,
-    color: "from-orange-500 to-red-500",
+    icon: Code,
+    color: "from-purple-500 to-pink-500",
   },
 ];
 
