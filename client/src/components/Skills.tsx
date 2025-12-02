@@ -88,7 +88,7 @@ const projects = [
   },
   {
     title: "CTO & Desenvolvimento de Soluções Digitais",
-    link: "https://alliance-marcas.onrender.com/",
+    link: "https://www.alliancemarcas.com.br/",
     image: "projects/alliance-marcas.png",
     description:
       "Responsável pela arquitetura e criação do site oficial e sistemas de gestão da empresa, unindo tecnologia, performance e experiência do usuário.",
