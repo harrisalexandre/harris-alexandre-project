@@ -31,12 +31,7 @@ function App() {
       <ScrollToTop />
       <Header />
       
-      {/* Parallax 3D Background - Global */}
-      <div className="fixed inset-0 w-full h-full z-0 hidden lg:block bg-[#110e0c] pointer-events-auto">
-        <Spline scene="https://prod.spline.design/Vp8pTB9enRZy-YSl/scene.splinecode" />
-      </div>
-      <div className="fixed inset-0 w-full h-full z-0 block lg:hidden bg-gradient-to-br from-[#1a1412] to-[#0a0807]"></div>
-
+      
       {/* Glassmorphic container for the routed pages */}
       <div className="flex-1 flex flex-col z-10 relative pointer-events-none">
         <Routes>
